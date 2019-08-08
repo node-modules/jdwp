@@ -1,0 +1,47 @@
+{
+  "name": "jdwp",
+  "version": "0.0.0",
+  "description": "Java Debug Wire Protocol",
+  "main": "index.js",
+  "scripts": {
+    "autod": "autod",
+    "lint": "eslint . --ext .js",
+    "cov": "TEST_TIMEOUT=20000 egg-bin cov",
+    "test": "npm run lint && npm run test-local",
+    "test-local": "egg-bin test",
+    "pkgfiles": "egg-bin pkgfiles --check",
+    "ci": "npm run autod -- --check && npm run pkgfiles && npm run lint && npm run cov",
+    "contributors": "contributors -f plain -o AUTHORS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-modules/jdwp.git"
+  },
+  "keywords": [
+    "jdwp",
+    "java",
+    "debug"
+  ],
+  "author": "gxcsoccer <gxcsoccer@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-modules/jdwp/issues"
+  },
+  "homepage": "https://github.com/node-modules/jdwp#readme",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "ci": {
+    "version": "10, 12"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "contributors": "^0.5.1",
+    "egg-bin": "^4.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-egg": "^7.4.1"
+  }
+}
