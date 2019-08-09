@@ -1,0 +1,17 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+  - '12'
+jdk:
+  - oraclejdk8
+before_install:
+  - npm i npminstall -g
+install:
+  - npminstall
+script:
+  - jdk_switcher use oraclejdk8
+  - java -version
+  - npm run ci
+after_script:
+  - npminstall codecov && codecov
