@@ -1,6 +1,6 @@
 {
   "name": "jdwp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Java Debug Wire Protocol",
   "main": "lib/index.js",
   "files": [
