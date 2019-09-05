@@ -2,10 +2,13 @@
   "name": "jdwp",
   "version": "0.0.0",
   "description": "Java Debug Wire Protocol",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "autod": "autod",
-    "lint": "eslint . --ext .js",
+    "lint": "eslint . --ext .js --fix",
     "cov": "TEST_TIMEOUT=20000 egg-bin cov",
     "test": "npm run lint && npm run test-local",
     "test-local": "egg-bin test",
@@ -32,16 +35,22 @@
     "node": ">= 10.0.0"
   },
   "ci": {
-    "version": "10, 12"
+    "version": "12"
   },
   "dependencies": {
-
+    "long": "^4.0.0",
+    "pump": "^3.0.0",
+    "sdk-base": "^3.6.0",
+    "utility": "^1.16.1"
   },
   "devDependencies": {
     "autod": "^3.1.0",
+    "await-event": "^2.1.0",
     "contributors": "^0.5.1",
     "egg-bin": "^4.13.0",
-    "eslint": "^6.1.0",
-    "eslint-config-egg": "^7.4.1"
+    "eslint": "^6.2.2",
+    "eslint-config-egg": "^7.5.1",
+    "mm": "^2.5.0",
+    "mz-modules": "^2.1.0"
   }
 }
